@@ -17,11 +17,11 @@ const start = options => {
     const app = express()
     app.use(morgan('dev'))
     app.use(helmet())
+    app.use('/api/v1', api(options))
     app.use((err, req, res, next) => {
       reject(new Error('Something went wrong!, err:' + err))
       res.status(500).send('Something went wrong!')
     })
-    api(app, options)
 
     const server = app.listen(options.port, () => resolve(server))
   })
