@@ -1,0 +1,5 @@
+.vscode
+movies/yarn-error.log
+movies/yarn.lock
+movies/package-lock.json
+movies/node_modules
