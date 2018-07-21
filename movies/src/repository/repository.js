@@ -2,19 +2,6 @@
 const repository = db => {
   const collection = db.collection('movies')
 
-  const saveMovie = title => {
-    return new Promise((resolve, reject) => {
-      const cursor = collection.save({
-        title: title,
-        releaseYear: new Date()
-      })
-      if (err) {
-        reject(new Error('An error occured fetching all movies, err:' + err))
-      }
-      resolve('created it!')
-    })
-  }
-
   const getAllMovies = () => {
     return new Promise((resolve, reject) => {
       const movies = []
