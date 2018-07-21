@@ -11,7 +11,7 @@ const start = options => {
       )
     }
     if (!options.port) {
-      reject(new Error('The server must be started with an available port'))
+      reject(new Error('The server must be started with an available port !'))
     }
 
     const app = express()
