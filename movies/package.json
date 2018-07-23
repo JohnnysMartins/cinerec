@@ -15,11 +15,9 @@
   },
   "scripts": {
     "test": "mocha -R spec src/**/*.spec.js",
-    "start": "nodemon",
+    "start": "nodemon --inspect src/index.js",
     "prod": "node",
     "lint": "standard --verbose | snazzy",
-    "node-debug": "DEBUG=express* node src/index.js",
-    "chrome-debug": "node --debug-brk --inspect src/index.js"
   },
   "keywords": [
     "express",
