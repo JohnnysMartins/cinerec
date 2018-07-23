@@ -1,6 +1,7 @@
 /* eslint-env mocha */
 const request = require('supertest')
 const server = require('../server/server')
+const should = require('should')
 
 describe('Movies API', () => {
   let app = null
@@ -63,7 +64,7 @@ describe('Movies API', () => {
 
   it('can return all movies', done => {
     request(app)
-      .get('/movies')
+      .get('/api/v1/movies')
       .expect(res => {
         res.body.should.containEql({
           id: '1',
@@ -79,7 +80,7 @@ describe('Movies API', () => {
 
   it('can get movie premiers', done => {
     request(app)
-      .get('/movies/premieres')
+      .get('/api/v1/movies/premieres')
       .expect(res => {
         res.body.should.containEql({
           id: '1',
@@ -95,7 +96,7 @@ describe('Movies API', () => {
 
   it('returns 200 for an known movie', done => {
     request(app)
-      .get('/movies/1')
+      .get('/api/v1/movies/1')
       .expect(res => {
         res.body.should.containEql({
           id: '1',
