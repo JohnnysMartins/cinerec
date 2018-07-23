@@ -17,7 +17,7 @@
     "test": "mocha -R spec src/**/*.spec.js",
     "start": "nodemon --inspect src/index.js",
     "prod": "node",
-    "lint": "standard --verbose | snazzy",
+    "lint": "standard --verbose | snazzy"
   },
   "keywords": [
     "express",
