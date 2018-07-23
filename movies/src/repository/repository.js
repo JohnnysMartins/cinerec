@@ -71,7 +71,6 @@ const repository = db => {
   }
 
   return Object.create({
-    saveMovie,
     getAllMovies,
     getMoviePremiers,
     getMovieById,
